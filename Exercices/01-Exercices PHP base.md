@@ -41,7 +41,7 @@ Variables, ifs, boucles, tableaux (arrays)
     qu'on payerait si on avait la réduction.
 
 6.  Créez un programme qui demande son nom à l'utilisateur et affiche un
-    message du style « Bienvenu xxxxxxxx ». Utilisez la fonction "read()" qui se trouve dans le dossier "Resources" (copiez la au début de votre code)
+    message du style « Bienvenu xxxxxxxx ». 
 
 7.  Créez un logiciel qui demande deux chiffres à l'utilisateur et qui
     affiche l'addition, la soustraction, la multiplication et la
@@ -95,7 +95,7 @@ Le script doit demander à l'utilisateur l'année et le nombre d'absences, et af
 -   Affichez une liste de trois produits et leur prix correspondant. Créez une variable pour chaque nom de produit et une variable pour chaque prix, ça vous fera 6 variables en tout (Si vous gérez bien les arrays vous pouvez les utiliser pour faire l'exercice).
 
 -   Demandez à l'utilisateur le nombre d'unités qu'il veut acheter de
-    chaque produit (fonction "read")
+    chaque produit
 
 -   Calculez le total de la commande sachant que :
 
