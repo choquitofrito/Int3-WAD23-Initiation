@@ -23,6 +23,7 @@ for ($i = 1; $i <= 200; $i++){
 //     $chiffres[$i] = $i + 1;
 // }
 
+
 foreach ($chiffres as $chiffre){
     print ("\n". $chiffre);
 }
