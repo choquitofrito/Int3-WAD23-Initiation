@@ -1,6 +1,6 @@
 - [Exercices de boucles, arrays, fonctions](#exercices-de-boucles-arrays-fonctions)
 - [Exercices de création de fonctions (+arrays)](#exercices-de-création-de-fonctions-arrays)
-- [Exercices de fonctions d\'Arrays natives](#exercices-de-fonctions-darrays-natives)
+- [Exercices de fonctions d'Arrays natives](#exercices-de-fonctions-darrays-natives)
 
 
 <br>
