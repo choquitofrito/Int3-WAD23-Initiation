@@ -13,7 +13,7 @@
     $repertoire = [
         [
             'nom' => 'Laurence',
-            'dateNaissance' => new DateTime ("2000-3-3"),
+            'dateNaissance' => new DateTime ("2000-1-1"),
             'telephone' => '0478324234'
         ],
         [
@@ -23,6 +23,14 @@
         ]
     ];
 
+    // $repertoire[0]['dateNaissance']->modify("+4 years");
+
+    $difference = $repertoire[0]['dateNaissance']->diff(new DateTime());
+    print ($difference->format ("%m"));
+    
+
+    // var_dump ($difference);
+    // die();
 
     if ($repertoire[0]['dateNaissance'] < $repertoire[1]['dateNaissance']){
         print ("<h5>Laurence est plus agée</h5>");
@@ -35,8 +43,13 @@
     // print ($repertoire[0]['dateNaissance']);
 
 
-    var_dump ($repertoire);
 
+    foreach ($repertoire as $contact){
+        print ("<br>". $contact ['nom']); // string
+        print ("<br>". $contact['dateNaissance']->format("y-m-d")); // objet!!
+        print ("<br>". $contact ['telephone']); // string
+    }
+    
     ?>
 </body>
 
