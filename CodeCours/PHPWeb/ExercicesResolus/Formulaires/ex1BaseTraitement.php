@@ -15,9 +15,10 @@
     $dateActuelle = new DateTime();
     $dateUser = new DateTime($dateNaissance);
     $difference = $dateActuelle->diff($dateUser);
+
+    var_dump ($difference);
+    
     $age = $difference->format ("%y");
-
-
 
     print ("<h3>Bonjour " . $_POST['prenom'] . " " . $_POST['nom'] . ", vous avez " . $age );
 ?>
