@@ -7,9 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="ex2BaseTraitement.php" method="POST">
-        Nom<input type="text" name="nom">
-        Prénom<input type="text" name="prenom">
+    <form action="ex3BaseTraitement.php" method="POST">
+        Tapez un chiffre<input type="number" name="valeur">
         <input type="submit" value="Envoyer">
     </form>
 </body>

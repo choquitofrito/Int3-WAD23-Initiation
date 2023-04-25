@@ -7,10 +7,17 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="ex2BaseTraitement.php" method="POST">
-        Nom<input type="text" name="nom">
-        Prénom<input type="text" name="prenom">
-        <input type="submit" value="Envoyer">
-    </form>
+<?php
+var_dump ($_POST);
+    $valeur = $_POST['valeur'];
+
+    if ($valeur == mt_rand (1,2)){
+        print ("<img src='./win.jpg'>");
+    }    
+    else {
+        print ("Nononono!");
+    }
+
+?>
 </body>
 </html>
