@@ -26,13 +26,28 @@
     ];
 
 
-    // var_dump ($paysCapitales);
+    $paysCapitales[] = [
+        'pays' => 'Espagne',
+        'capitale' => 'Madrid'
+    ];
 
-    print ("<ul>");
+
+    $paysCapitales[] = [
+        'pays' => 'Maroc',
+        'capitale' => 'Rabat'
+    ];
+
+
+    
+    print("<ul>");
     foreach ($paysCapitales as $pays) {
         print("<li>La capitale de " . $pays['pays'] . " est " . $pays['capitale'] . "</li>");
     }
-    print ("</ul>");
+    
+    print("</ul>");
+    
+    var_dump($paysCapitales);
+
 
     ?>
 </body>
