@@ -11,7 +11,10 @@
 
 <?php
     var_dump ($_POST);
+
+
     print ("Bonjour ". $_POST['nom']);
+    print ("<br>Je sais que vous aimez bien " . $_POST['hobby']);
 
 
 ?>
