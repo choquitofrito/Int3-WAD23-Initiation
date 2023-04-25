@@ -10,8 +10,8 @@
 
 
 <?php
-    var_dump ($_GET);
-    print ("Bonjour ". $_GET['nom']);
+    var_dump ($_POST);
+    print ("Bonjour ". $_POST['nom']);
 
 
 ?>
