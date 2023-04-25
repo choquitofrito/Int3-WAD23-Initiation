@@ -10,20 +10,7 @@
 
 <body>
     <?php
-    $film1 = [
-        'titre' => 'Mystic River',
-        'realisateur' => 'Clint Eastwood',
-    ];
-
-    $film2 = [
-        'titre' => 'The elephant man',
-        'realisateur' => 'David Lynch',
-    ];
-
-    $filmsA = [$film1, $film2];
-
-
-    $filmsB = [
+    $films = [
         [
             'titre' => 'Mystic River',
             'realisateur' => 'Clint Eastwood',
@@ -34,12 +21,16 @@
         ]
     ];
 
-    print_r ($filmsB);
+    foreach ($films as $arrayFilm){
+        print ("titre: " . $arrayFilm['titre'] . "<br>");
+        print ("realisateur: " . $arrayFilm['realisateur'] . "<br>");
 
+    }
 
 
 
     ?>
+
 </body>
 
 </html>

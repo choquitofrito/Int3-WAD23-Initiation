@@ -10,7 +10,8 @@ Variables, ifs, boucles, tableaux (arrays)
   - [Exercices Boucles](#exercices-boucles)
   - [Exercices Arrays (Tableaux)](#exercices-arrays-tableaux)
   - [Exercices: Arrays Associatifs](#exercices-arrays-associatifs)
-    - [Exercice extra arrays: Prix Avions](#exercice-extra-arrays-prix-avions)
+  - [Exercice extra arrays: Prix Avions](#exercice-extra-arrays-prix-avions)
+  - [Solutions (arrays assoc.)](#solutions-arrays-assoc)
 
 <br>
 
@@ -302,8 +303,7 @@ Tableau résultat :
     Modifiez la boucle pour qu\'elle affiche uniquement les capitales.
     Revenez à la boucle originale.
 
-6)  Affichez le contenu du array avec print\_r pour mieux comprendre
-    l\'organisation des indices
+6)  Affichez le contenu du tableau avec var_dump pour mieux comprendre l\'organisation des indices
 
 7)  Créez trois arrays contenant le nom, date de naissance et le numéro
     de téléphone de 3 personnes. Créez un array \"repertoire\" contenant ces
@@ -349,7 +349,7 @@ Pour éliminer les décimales, vous pouvez utiliser la fonction
 
 <br>
 
-### Exercice extra arrays: Prix Avions
+## Exercice extra arrays: Prix Avions
 
 <br>
 
@@ -376,3 +376,99 @@ disponibles pour aller à Cuba à une certaine date (en euros):
 6)  Comptez le nombre de vols qui coutent moins de 700 euros
 
 7)  Calculez la moyenne de prix de vols
+
+
+<br>
+
+
+## Solutions (arrays assoc.)
+
+```php
+
+// Création de l'array films-réalisateur
+$films_realisateurs = array(
+    "Le Parrain" => "Francis Ford Coppola",
+    "Pulp Fiction" => "Quentin Tarantino",
+    "Forrest Gump" => "Robert Zemeckis"
+);
+
+// Affichage avec une boucle foreach
+foreach ($films_realisateurs as $film => $realisateur) {
+    echo "Le réalisateur de $film est $realisateur.<br>";
+}
+
+
+// Remplacement du réalisateur du premier film
+$films_realisateurs["Le Parrain"] = "Ed Wood";
+
+// Ajout de deux nouveaux pays et leurs capitales
+$pays_capitales = array(
+    "France" => "Paris",
+    "Espagne" => "Madrid",
+    "Italie" => "Rome",
+    "Allemagne" => "Berlin",
+    "Royaume-Uni" => "Londres",
+    "Japon" => "Tokyo"
+);
+
+// Affichage de chaque pays et de sa capitale
+foreach ($pays_capitales as $pays => $capitale) {
+    echo "La capitale de $pays est $capitale.<br>";
+}
+
+// Affichage de tous les pays uniquement
+foreach ($pays_capitales as $pays => $capitale) {
+    echo "$pays<br>";
+}
+
+// Affichage de toutes les capitales uniquement
+foreach ($pays_capitales as $pays => $capitale) {
+    echo "$capitale<br>";
+}
+
+// Retour à l'affichage original
+foreach ($pays_capitales as $pays => $capitale) {
+    echo "La capitale de $pays est $capitale.<br>";
+}
+
+// Affichage avec var_dump pour mieux comprendre l'organisation des indices
+var_dump($pays_capitales);
+
+// Création d'un array "repertoire" contenant les informations de 3 personnes
+$personne1 = array("nom" => "Dupont", "date_naissance" => "01/01/1990", "telephone" => "06 01 02 03 04");
+$personne2 = array("nom" => "Durand", "date_naissance" => "02/02/1991", "telephone" => "06 05 06 07 08");
+$personne3 = array("nom" => "Martin", "date_naissance" => "03/03/1992", "telephone" => "06 09 10 11 12");
+
+$repertoire = array($personne1, $personne2, $personne3);
+
+// Affichage complet du repertoire
+foreach ($repertoire as $personne) {
+    echo "Nom : " . $personne["nom"] . "<br>";
+    echo "Date de naissance : " . $personne["date_naissance"] . "<br>";
+    echo "Téléphone : " . $personne["telephone"] . "<br><br>";
+}
+
+
+echo "<table>";
+foreach ($repertoire as $personne){
+    echo "<tr>";
+    echo "<td>";
+    echo $personne['nom'];
+    echo "</td>";
+    echo "<td>";
+    echo $personne['date_naissance'];
+    echo "</td>";
+    echo "<td>";
+    echo $personne['telephone'];
+    echo "</td>";
+    echo "</tr>"
+}
+echo "</table>";
+
+// rajouter un contact au répertoire
+$repertoire[] = array("nom" => "Pepito", "date_naissance" => "02/02/1992", "telephone" => "06 05 06 07 08");
+
+
+
+
+```
